@@ -1,0 +1,8 @@
+[Unit]
+Description=rtcwake scheduler
+
+[Service]
+ExecStart=/bin/sh /usr/bin/autowakeup
+
+[Install]
+WantedBy=multi-user.target
