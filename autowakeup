@@ -75,25 +75,25 @@ if [ ! -f "/etc/autowakeup/autowakeup.schedule" ] ; then
 # format "HH:MM" or "-" if disabled for that day
 
 # Monday
-START_AT_DAY[1]="04:00"
+START_AT_DAY[1]="08:00"
 
 # Tuesday
-START_AT_DAY[2]="-"
+START_AT_DAY[2]="08:00"
 
 # Wednesday
-START_AT_DAY[3]="-"
+START_AT_DAY[3]="08:00"
 
 # Thursday
 START_AT_DAY[4]="08:00"
 
 # Friday
-START_AT_DAY[5]="-"
+START_AT_DAY[5]="08:00"
 
 # Saturday
-START_AT_DAY[6]="-"
+START_AT_DAY[6]="10:00"
 
 # Sunday
-START_AT_DAY[7]="-"
+START_AT_DAY[7]="10:00"
 EOF
 fi
 
