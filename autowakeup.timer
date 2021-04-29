@@ -1,0 +1,9 @@
+[Unit]
+Description=Autowakeup timer
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=1h 
+
+[Install]
+WantedBy=timers.target
