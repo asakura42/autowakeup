@@ -26,11 +26,11 @@
 #   to give enough time to shutdown before restart
 
 if [ ! -d "${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup" ] ; then
-	mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup"
+	mkdir -p "/etc/autowakeup"
 fi
 
 if [ ! -f "${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup/autowakeup.conf" ] ; then
-	cat << EOF > "${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup/autowakeup.conf"
+	cat << EOF > "/etc/autowakeup/autowakeup.conf"
 # conf script for autowakeup.sh
 
 # Set the time your PC should wakeup with rtcwake
@@ -64,12 +64,12 @@ RTC_SHOW_MODE=2
 RTC_UTC=false
 
 # Path to your schedule-file
-SCHEDULE="${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup/autowakeup.schedule"
+SCHEDULE="/etc/autowakeup/autowakeup.schedule"
 EOF
 fi
 
-if [ ! -f "${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup/autowakeup.schedule" ] ; then
-	cat << EOF > "${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup/autowakeup.schedule"
+if [ ! -f "/etc/autowakeup/autowakeup.schedule" ] ; then
+	cat << EOF > "/etc/autowakeup/autowakeup.schedule"
 ##############################################################################
 # Define your wakeup-times below in
 # format "HH:MM" or "-" if disabled for that day
@@ -108,7 +108,7 @@ DAYNAME=(dummy monday tuesday wednesday thursday friday saturday sunday)
 
 VERSION="0.3.0"         # script version information
 
-AUTOWAKEUP_CONF="${XDG_CONFIG_HOME:-$HOME/.config}/autowakeup/autowakeup.conf"
+AUTOWAKEUP_CONF="/etc/autowakeup/autowakeup.conf"
 
 ######################################
 ######## FUNCTION DECLARATION ########
